@@ -25,7 +25,7 @@ img {
   border: 5px solid forestgreen;
   overflow: hidden;
   position: relative;
-  /*cursor: grab;*/
+  cursor: grab;
 }
 
 .wrapperImage {

@@ -1,6 +1,5 @@
 import './styles/app.css';
 
-const wrapperCarousel = document.getElementById('wrapperCarousel')
 const wrapperImage = document.getElementById('wrapperImage')
 const images = document.querySelectorAll('.wrapperImage img')
 const body = document.getElementById('body')
