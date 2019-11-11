@@ -15,7 +15,7 @@ img {
 }
 
 #wrapperImage.shifting {
-  transition: left .7s;
+  transition: left .3s;
 }
 
 #wrapperCarousel {

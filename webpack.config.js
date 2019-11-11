@@ -1,25 +1,22 @@
 const path = require('path')
-const HtmlwebpackPlugin = require('html-webpack-plugin');
-//const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-// const extractPlugin = new ExtractTextPlugin({
-//   filename: 'main.css'
-// })
-module.exports ={
+module.exports = {
   entry: {
     app: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'main.js',
+    publicPath: '/dist'
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+          MiniCssExtractPlugin.loader,
+          'css-loader',
         ]
       },
       {
@@ -30,7 +27,7 @@ module.exports ={
             options: {
               name: '[name].[ext]',
               outputPath: 'img/',
-              publicPath: 'img/',
+              publicPath: 'img/'
             },
           },
         ],
@@ -47,5 +44,13 @@ module.exports ={
         ],
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+      outputPath: 'styles/',
+      publicPath: 'styles/'
+    }),
+  ]
 }
