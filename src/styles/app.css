@@ -6,8 +6,8 @@ html {
 body {
   display: flex;
   justify-content: center;
-  width: 750px;
-  position: relative;
+  width: 1500px;
+  height: 1500px;
 }
 
 img {
@@ -34,8 +34,10 @@ img {
 }
 
 .buttonLeft, .buttonRight {
-  position: absolute;
-  bottom: 50%;
+  position: relative;
+  width: 30px;
+  height: 50px;
+  top: 200px;
   background-color: gainsboro;
   font-size: 45px;
   opacity: 0.4;
@@ -44,10 +46,10 @@ img {
 }
 
 .buttonLeft {
-  left: -15px;
+  left: -777px;
 }
 
 .buttonRight {
-  right: -15px;
+  right: -7px;
 }
 
