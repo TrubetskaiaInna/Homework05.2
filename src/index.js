@@ -1,4 +1,4 @@
-import './app.css'
+import './style.css'
 import './infinityCarousel.js'
 import './index.html'
 import img from './img/one.jpg'
